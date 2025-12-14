@@ -19,12 +19,11 @@ export class ListFacturesComponent {
     this.loadFactures();
   }
 
-  // Charger toutes les factures depuis la base
+  
   async loadFactures() {
     this.factures = await this.fs.getAll();
   }
 
-  // Calcul du total HT d'une facture
   getTotalLigne(facture: Facture): number {
   return facture.lignes.reduce((sum, l: any) => {
     return sum + (Number(l.produit.prixProduit) * Number(l.quantite));

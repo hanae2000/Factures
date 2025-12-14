@@ -6,7 +6,7 @@ export class Facture {
         public idFacture: undefined,
         public dateFacture: Date,
         public client: Client,
-        public lignes: LigneCmd[] = []   // <-- standardized to 'lignes'
+        public lignes: LigneCmd[] = []   
     ){}
 
     get totalHT(){

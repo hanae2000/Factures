@@ -74,10 +74,10 @@ export class FacturesComponent {
 
   await this.fs.add(f);
 
-  // Message de succès
+  
   alert("Facture enregistrée avec succès !");
 
-  // Réinitialiser le formulaire
+  
   this.lignes = [];
   this.selectedClient = null;
   this.selectedProduct = null;

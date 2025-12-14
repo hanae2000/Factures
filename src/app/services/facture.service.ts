@@ -7,7 +7,7 @@ export class FactureService {
   private db = new AppDB();
 
   async add(f: Facture) {
-    return this.db.factures.add(f); // idFacture sera auto-généré
+    return this.db.factures.add(f); 
   }
 
   async getAll(): Promise<Facture[]> {

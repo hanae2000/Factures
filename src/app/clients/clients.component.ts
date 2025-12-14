@@ -32,11 +32,11 @@ export class ClientsComponent {
   if (!this.nom) return;
 
   if (this.editMode) {
-    // UPDATE → id obligatoire
+
     let c = new Client(this.id, this.nom);
     this.cs.update(c).then(() => this.load());
   } else {
-    // ADD → SANS ID
+    
     this.cs.add({ nomClient: this.nom }).then(() => this.load());
   }
 
@@ -45,8 +45,8 @@ export class ClientsComponent {
 
 
   edit(c: Client) {
-  this.id = c.idClient!;     // ⬅️ ! = non null
-  this.nom = c.nomClient!;   // ⬅️ ! = non null
+  this.id = c.idClient!;     
+  this.nom = c.nomClient!;   
   this.editMode = true;
 }
 

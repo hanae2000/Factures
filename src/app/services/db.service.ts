@@ -5,7 +5,7 @@ import { Client } from '../models/client.model';
 import { Facture } from '../models/facture.model';
 
 @Injectable({
-  providedIn: 'root' // 🔥 IMPORTANT
+  providedIn: 'root' 
 })
 export class AppDB extends Dexie {
 

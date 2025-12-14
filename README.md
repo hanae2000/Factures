@@ -1,67 +1,69 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# FirstProject
+Projet Gestion de Factures
+Description
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+Ce projet est une application web de gestion de factures, développée avec Angular et utilisant Dexie (IndexedDB) pour le stockage local des données.
 
-## Development server
+Elle permet de :
 
-To start a local development server, run:
+Gérer les clients : ajouter, modifier, supprimer.
 
-```bash
-ng serve
-```
+Gérer les produits : ajouter, modifier, supprimer.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Créer des factures : sélectionner un client, ajouter des produits avec quantité, calcul automatique du Total HT, TVA et TTC.
 
-## Code scaffolding
+Consulter la liste des factures enregistrées.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Supprimer une facture de manière sécurisée, avec confirmation.
 
-```bash
-ng generate component component-name
-```
+Toutes les données sont stockées localement dans le navigateur via IndexedDB, ce qui permet de conserver les informations même après fermeture du navigateur.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Technologies utilisées
 
-```bash
-ng generate --help
-```
+Angular 17 (Standalone Components)
 
-## Building
+Typescript
 
-To build the project run:
+Dexie.js pour IndexedDB
 
-```bash
-ng build
-```
+HTML / CSS pour l’interface
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Fonctionnalités principales
+Gestion des clients
 
-## Running unit tests
+Ajouter un client avec un ID unique et un nom.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Modifier les informations d’un client existant.
 
-```bash
-ng test
-```
+Supprimer un client.
 
-## Running end-to-end tests
+Gestion des produits
 
-For end-to-end (e2e) testing, run:
+Ajouter un produit avec un ID, un nom et un prix.
 
-```bash
-ng e2e
-```
+Modifier un produit existant.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Supprimer un produit.
 
-## Additional Resources
+Création de factures
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# Facture
->>>>>>> 30eb59a210d65d79dfe812b6d7907b4cc34fd9b1
-=======
-# Factures
->>>>>>> 3d2982bd9455fb2f397e17195578c5ae5c11e5e3
+Sélection du client.
+
+Sélection des produits et saisie des quantités.
+
+Calcul automatique :
+
+Total HT
+
+TVA (20%)
+
+TTC
+
+Enregistrement de la facture dans IndexedDB avec génération automatique d’un ID unique.
+
+Liste des factures
+
+Affichage de toutes les factures enregistrées.
+
+Affichage du client, date, Total HT, TVA et TTC.
+
+Possibilité de supprimer une facture avec confirmation.

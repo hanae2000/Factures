@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # FirstProject
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
@@ -61,3 +62,6 @@ For more information on using the Angular CLI, including detailed command refere
 =======
 # Facture
 >>>>>>> 30eb59a210d65d79dfe812b6d7907b4cc34fd9b1
+=======
+# Factures
+>>>>>>> 3d2982bd9455fb2f397e17195578c5ae5c11e5e3

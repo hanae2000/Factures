@@ -1,0 +1,32 @@
+<h2>Gestion des Produits</h2>
+
+<div class="form-center">
+<input placeholder="Numéro" type="number" [(ngModel)]="idProduit">
+<input placeholder="Nom" type="text" [(ngModel)]="nomProduit">
+<input placeholder="Prix" type="number" [(ngModel)]="prixProduit">
+
+<button (click)="save()">
+  {{ editMode ? "Modifier" : "Ajouter" }}
+</button>
+</div>
+
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num</th><th>Nom</th><th>Prix</th><th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products">
+      <td>{{ p.idProduit }}</td>
+      <td>{{ p.nomProduit }}</td>
+      <td>{{ p.prixProduit }} DH</td>
+      <td>
+        <button (click)="edit(p)">Edit</button>
+        <button (click)="delete(p.idProduit!)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,150 @@
+/* NAVBAR */
+/* Nav principale */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+/* Liste horizontale centrée */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  gap: 30px; /* espace entre les liens */
+  margin: 0;
+  padding: 0;
+}
+
+/* Liens */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+  transform: scale(1.1);
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 25px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* TITRE */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
+/* FORM INPUTS */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #1abc9c;
+  outline: none;
+}
+
+/* INLINE FORM */
+.form-inline {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th {
+  background: #1abc9c;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* BUTTONS */
+.btn {
+  background: #1abc9c;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #16a085;
+}
+
+.btn-danger {
+  background: #e74c3c;
+  padding: 8px 12px;
+}
+
+.btn-danger:hover {
+  background: #c0392b;
+}
+
+.btn-primary {
+  background: #3498db;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+  background: #2980b9;
+}
+
+/* TOTALS */
+.totaux p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.ttc {
+  font-size: 20px;
+  color: #27ae60;
+  font-weight: bold;
+}

@@ -1,0 +1,58 @@
+<div class="container">
+
+  <h2>Nouvelle Facture</h2>
+
+  <div class="form-group">
+    <label>Date :</label>
+    <input type="date" [(ngModel)]="selectedDate" [ngModelOptions]="{standalone: true}">
+  </div>
+
+  <div class="form-group">
+    <label>Client :</label>
+    <select [(ngModel)]="selectedClient" [ngModelOptions]="{standalone: true}">
+      <option *ngFor="let c of clients" [ngValue]="c">{{ c.nomClient }}</option>
+    </select>
+  </div>
+
+  <hr>
+
+  <div class="form-inline">
+    <select [(ngModel)]="selectedProduct" [ngModelOptions]="{standalone: true}">
+      <option *ngFor="let p of products" [ngValue]="p">
+        {{ p.nomProduit }} - {{ p.prixProduit }} DH
+      </option>
+    </select>
+
+    <input type="number" [(ngModel)]="quantite" min="1" placeholder="Quantité" [ngModelOptions]="{standalone: true}">
+    <button class="btn" (click)="addLine()">Ajouter</button>
+  </div>
+
+  <table>
+    <tr>
+      <th>Produit</th>
+      <th>Prix</th>
+      <th>Quantité</th>
+      <th>Total</th>
+      <th></th>
+    </tr>
+
+    <tr *ngFor="let l of lignes; let i = index">
+      <td>{{ l.produit.nomProduit }}</td>
+      <td>{{ l.produit.prixProduit }} DH</td>
+      <td>{{ l.quantite }}</td>
+      <td>{{ l.total }} DH</td>
+      <td><button class="btn-danger" (click)="removeLine(i)">X</button></td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <div class="totaux">
+    <p>Total HT : <b>{{ totalHT }} DH</b></p>
+    <p>TVA (20%) : <b>{{ tva | number:'1.2-2' }} DH</b></p>
+    <p class="ttc">TTC : <b>{{ ttc | number:'1.2-2' }} DH</b></p>
+  </div>
+
+  <button class="btn-primary" (click)="saveFacture()"><b>Enregistrer la facture</b></button>
+
+</div>

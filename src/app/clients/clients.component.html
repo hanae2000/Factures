@@ -1,0 +1,30 @@
+<h2>Gestion des Clients</h2>
+
+<div class="form-center">
+<input type="number" placeholder="ID" [(ngModel)]="id">
+<input type="text" placeholder="Nom" [(ngModel)]="nom">
+<button (click)="save()">
+  {{ editMode ? "Modifier" : "Ajouter" }}
+</button>
+</div>
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of clients">
+      <td>{{ c.idClient }}</td>
+      <td>{{ c.nomClient }}</td>
+      <td>
+        <button (click)="edit(c)">Edit</button>
+        <button (click)="delete(c.idClient!)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
